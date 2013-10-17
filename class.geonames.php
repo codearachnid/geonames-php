@@ -149,6 +149,10 @@ class GeoNames_API{
 			);
 		}
 
+		if( !empty( $params ) && !is_array($params)){
+			// TODO how to handle inbound string vs array
+		}
+
 		// setup username for removing limit on api access
         if ($this->username !== null) {
             $params['username'] = $this->username;
