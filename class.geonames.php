@@ -141,6 +141,7 @@ class GeoNames_API{
      *                                     when the websercices returns an error
      */
 	public function __call( $endpoint, $params = array() ){
+
 		// check that endpoint is supported
 		if (!in_array($endpoint, $this->get_supported_endpoints())) {
 			throw new GeoNames_API_Exception(
